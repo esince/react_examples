@@ -10,6 +10,7 @@ export default class CategoryList extends Component {
         { categoryId: 2, categoryName: "Condiments" },
       ],
     //   counter: 1
+    currentCategory:"ggg"
     };
   }
   render() {
@@ -19,9 +20,10 @@ export default class CategoryList extends Component {
         {/* <h3>{this.state.counter}</h3> */}
         <ListGroup>
           {this.state.categories.map((category) => (
-            <ListGroupItem key ={category.categoryId}>{category.categoryName}</ListGroupItem>
+            <ListGroupItem onClick ={this.setState({currentCategory:"abc"})}key ={category.categoryId}>{category.categoryName}</ListGroupItem>
           ))}
         </ListGroup>
+        <h4>{this.state.currentCategory}</h4>
       </div>
     );
   }
