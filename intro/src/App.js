@@ -16,10 +16,10 @@ export default class App extends Component {
     this.getProducts(category.seoUrl) 
   };
 
-  getProducts = (seoUrl) => {
+  getProducts = (categoryId) => {
     let url = "http://localhost:3000/products"
-    if(seoUrl){
-      url+="/"+seoUrl
+    if(categoryId){
+      url+="?categoryId="+categoryId
     }
     fetch(url)
       .then((response) => response.json())
