@@ -13,7 +13,7 @@ export default class App extends Component {
   //arrow function declaration
   changeCategory = (category) => {
     this.setState({ currentCategory: category.categoryName });
-    this.getProducts(category.seoUrl) 
+    this.getProducts(category.categoryId) 
   };
 
   getProducts = (categoryId) => {
