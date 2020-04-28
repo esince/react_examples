@@ -13,6 +13,7 @@ export default class App extends Component {
   //arrow function declaration
   changeCategory = (category) => {
     this.setState({ currentCategory: category.categoryName });
+    console.log(category)
     this.getProducts(category.categoryId) 
   };
 
