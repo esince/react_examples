@@ -26,9 +26,9 @@ export default class CategoryList extends Component {
         <h3>{this.props.info.title}</h3>
         {/* <h3>{this.state.counter}</h3> */}
         {/* arrow function is needed */}
-        <ListGroup>
+        <ListGroup >
           {this.state.categories.map((category) => (
-            <ListGroupItem
+            <ListGroupItem active = {category.categoryName === this.props.currentCategory ? true: false}
               onClick={() => this.props.changeCategory(category)}
               key={category.id}
             >
