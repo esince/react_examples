@@ -3,7 +3,9 @@ import { Table, Button } from "reactstrap";
 
 export default class ProductList extends Component {
   //no need to constructor with new versions. ıt wont give any error.
-
+  addToCart = (product)=>{
+    alert(product.productName)
+  }
   render() {
     return (
       <div>
@@ -30,7 +32,7 @@ export default class ProductList extends Component {
                 <td>{product.unitPrice}</td>
                 <td>{product.quantityPerUnit}</td>
                 <td>{product.unitsInStock}</td>
-                <td><Button color="info">Add</Button></td>
+                <td><Button onClick ={()=>this.addToCart(product)} color="info">Add</Button></td>
 
               </tr>
             ))}
